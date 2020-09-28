@@ -21,7 +21,12 @@ import EntityTimed from './model/EntityTimed.js'
 import { Orm, DataTypes, QueryTypes } from './model/Orm.js'
 import View from './model/View.js'
 
+import AbstractApplication from './app/AbstractApplication.js'
+import Request from './app/Request.js'
+import Response from './app/Response.js'
+
 export {
 	Controller, Crud, Report, Restricted, SchemaValidator, StringHelper,
-	Entity, EntityTimed, Orm, DataTypes, QueryTypes, View
+	Entity, EntityTimed, Orm, DataTypes, QueryTypes, View,
+	AbstractApplication, Response, Request
 }

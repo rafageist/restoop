@@ -1,5 +1,5 @@
 import path from 'path'
-import StringHelper from './helpers/StringHelper.js'
+import StringHelper from '../helpers/StringHelper.js'
 import Request from './Request.js'
 import Response from './Response.js'
 

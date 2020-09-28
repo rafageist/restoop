@@ -1,5 +1,5 @@
 import Restricted from './Restricted.js'
-import Response from '../Response.js'
+import Response from '../app/Response.js'
 
 export default class Report extends Restricted {
 
