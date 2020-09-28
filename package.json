@@ -1,0 +1,29 @@
+{
+  "name": "@rafageist/restoop",
+  "version": "1.0.0",
+  "description": "Micro-framework for build websites and REST API using dynamic importing",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafageist/restoop.git"
+  },
+  "keywords": [
+    "micro-framework",
+    "rest-api",
+    "dynamic-importing"
+  ],
+  "author": "Rafa Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafageist/restoop/issues"
+  },
+  "homepage": "https://github.com/rafageist/restoop#readme",
+  "dependencies": {
+    "joi": "^17.2.1",
+    "sequelize": "^6.3.5"
+  }
+}
