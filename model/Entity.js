@@ -3,6 +3,8 @@ export default class Entity {
 
     // model name (defined in child classes)
     static model = undefined;
+    static config = undefined;
+    static ormInstance = undefined;
 
     // default fields for all entities
     static fields = {
@@ -146,10 +148,16 @@ export default class Entity {
      *
      * @returns {*}
      */
-    static orm(options = {timestamps: false}) {
+    static orm(config, options = {timestamps: false}) {
+
+        if (typeof this.ormInstance === 'undefined') {
+            this.ormInstance = new Orm(config);
+        }
+
         if (typeof this.definition === 'undefined')  {
             this.definition = Orm.define(this.model, this.fields, options);
         }
+
         return this.definition
     }
 
@@ -157,7 +165,7 @@ export default class Entity {
      * ORM definition of instance
      */
     definition() {
-        return this.constructor.orm();
+        return this.constructor.orm(this.constructor.config);
     }
 
     /**
