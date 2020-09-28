@@ -1,5 +1,5 @@
 import Restricted from './Restricted.js'
-import Response from '../../framework/Response.js'
+import Response from '../app/Response.js'
 
 export default class Crud extends Restricted {
 

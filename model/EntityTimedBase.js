@@ -1,9 +1,9 @@
-import Entity from './Entity.js'
+import Entity from './EntityBase.js'
 
 /**
  * Entity with timestamps
  */
-export default class EntityTimed extends Entity {
+export default class EntityTimedBase extends Entity {
 
 	/**
 	 * ORM definition
@@ -11,7 +11,7 @@ export default class EntityTimed extends Entity {
 	 * @returns {*}
 	 */
 	static orm() {
-		return super.orm({
+		return super.orm(this.config, {
 			timestamps: true,
 			createdAt: 'created_at',
 			updatedAt: 'updated_at'

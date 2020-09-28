@@ -1,5 +1,5 @@
 import { Orm, DataTypes } from './Orm.js';
-export default class Entity {
+export default class EntityBase {
 
     // model name (defined in child classes)
     static model = undefined;
@@ -148,14 +148,14 @@ export default class Entity {
      *
      * @returns {*}
      */
-    static orm(config, options = {timestamps: false}) {
+    static orm(config = this.config, options = {timestamps: false}) {
 
         if (typeof this.ormInstance === 'undefined') {
             this.ormInstance = new Orm(config);
         }
 
         if (typeof this.definition === 'undefined')  {
-            this.definition = Orm.define(this.model, this.fields, options);
+            this.definition = this.ormInstance.define(this.model, this.fields, options);
         }
 
         return this.definition

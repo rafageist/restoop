@@ -24,7 +24,11 @@
   "homepage": "https://github.com/rafageist/restoop#readme",
   "dependencies": {
     "joi": "^17.2.1",
+    "joi-phone-number": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
     "path": "^0.12.7",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5"
   }
 }
