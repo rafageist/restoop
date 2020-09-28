@@ -1,6 +1,6 @@
 {
   "name": "@rafageist/restoop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Micro-framework for build websites and REST API using dynamic importing",
   "main": "index.js",
   "type": "module",
